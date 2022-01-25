@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <time.h> // 난수 사용하기 위한 추가
 
-int main(void)
+int main_condition(void)
 {	
 	//int age = 25;
 	//if (age >= 20)
@@ -148,7 +148,7 @@ int main(void)
 	srand(time(NULL));
 	int num = rand() % 100 + 1; // 1~100 사이추출
 	printf("NUM: %d \n", num);
-	int answer = 0; // ans
+	int answer ; // ans
 	int chance = 5;// chance
 
 	while (1)
