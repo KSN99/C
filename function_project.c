@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <time.h>
+#include <time.h> // 난수 선언 
 
 int getRandomNumber(int level);
 void showQuestion(int level, int num1, int num2);
@@ -8,12 +8,12 @@ void fail();
 
 int main(void)
 {
-	// 문이 5개가 있고 각문마다 점점 어려운 수식 퀴즈 출제 
-	//문제를 맞추면 통과 , 틀리면 실패 
+	// 문이 5개가 있고 각문마다 점점 어려운 수식 퀴즈 출제 //
+	//문제를 맞추면 통과 , 틀리면 실패 //
 
-	srand(time(NULL));
+	srand(time(NULL)); // 난수 선언 
 	int count = 0; // 맞춘 문제 갯수 
-	for (int i = 1; i <= 5; i++)
+	for (int i = 1; i <= 5; i++) // 기회 12345 5번 . 
 	{
 		int num1 = getRandomNumber(i);
 		int num2 = getRandomNumber(i);
@@ -24,7 +24,7 @@ int main(void)
 		scanf_s("%d", &answer);
 		if (answer == -1)
 		{
-			printf("End\n");
+			printf("End \n");
 			exit(0); // 프로그램을 종료해라. 무조건 
 		}
 		else if (answer == num1 * num2)
@@ -40,7 +40,7 @@ int main(void)
 		}
 	}
 
-	printf("\n\n 당신은 5개의 비밀번호중 %d 개를 맞췄습니다.\n", count);
+	printf("\n\n 당신은 5개의 비밀번호중 %d 개를 맞췄습니다. \n", count);
 
 	return 0;
 
